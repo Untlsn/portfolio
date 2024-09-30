@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+import TheHeader from '~/components/TheHeader.vue';
+import TheTechSwipes from '~/components/TechSwipes/TheTechSwipes.vue';
 </script>
 
 <template>
@@ -35,6 +36,7 @@
 				</ul>
 			</nav>
 		</article>
+		<TheTechSwipes />
 	</main>
 </template>
 

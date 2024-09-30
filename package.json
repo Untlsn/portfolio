@@ -10,10 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/line-md": "^1.2.1",
+    "@iconify-json/ph": "^1.2.0",
     "@unocss/nuxt": "^0.63.1",
     "nuxt": "^3.13.0",
     "unocss": "^0.63.1",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/devicon": "^1.2.2"
   }
 }

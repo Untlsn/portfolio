@@ -5,4 +5,7 @@ export default defineNuxtConfig({
 	modules: [
 		'@unocss/nuxt',
 	],
+	components: {
+		dirs: []
+	}
 })
