@@ -13,6 +13,7 @@
     "@iconify-json/line-md": "^1.2.1",
     "@iconify-json/ph": "^1.2.0",
     "@unocss/nuxt": "^0.63.1",
+    "@vue/language-server": "^2.1.6",
     "nuxt": "^3.13.0",
     "radix-vue": "^1.9.6",
     "unocss": "^0.63.1",

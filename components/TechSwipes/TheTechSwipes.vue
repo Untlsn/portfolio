@@ -3,7 +3,40 @@ import TechSwipesCell from '~/components/TechSwipes/TechSwipesCell.vue'
 import TechSwipesCellLite from '~/components/TechSwipes/TechSwipesCellLite.vue';
 import TechSwipesCellDouble from '~/components/TechSwipes/TechSwipesCellDouble.vue';
 
-const selected = shallowRef("react");
+const selected = shallowRef('react');
+watchEffect(() => {
+	console.log(selected.value);
+})
+
+const selectedData = computed(() => {
+	switch (selected.value) {
+		case 'windows': return {
+			from: 'Windows',
+			to: 'Arch (btw)',
+		}
+		case 'sass': return {
+			from: 'Sass',
+			to: 'Tailwind',
+		}
+		case 'javascript': return {
+			from: 'Javascript',
+			to: 'Typescript / Rust',
+		}
+		case 'nodejs': return {
+			from: 'Nodejs',
+			to: 'Bun',
+		}
+		case 'express': return {
+			from: 'Express',
+			to: 'Hono',
+		}
+		default: return {
+			from: 'React',
+			to: 'Vue / Solid',
+		}
+	}
+})
+
 </script>
 
 <template>
@@ -12,40 +45,40 @@ const selected = shallowRef("react");
 	<p class="mt-4 mb-8 text-lg">Znam i uzywam tych technologi, ale zdecydowanie bardziej wole te alternatywy:</p>
 	<ul class="grid-(~ cols-fit-32) gap-4 justify-center">
 		<TechSwipesCellDouble
-				:selected="selected == 'react'"
-				@select="selected = 'react'"
+				:model-value="selected == 'react'"
+				@update:model-value="selected = 'react'"
 				prev="i-devicon-react"
 				:next="['i-devicon-vuejs', 'i-devicon-solidjs']"
 		/>
 		<TechSwipesCellLite
-				:selected="selected == 'windows'"
-				@select="selected = 'windows'"
+				:model-value="selected == 'windows'"
+				@update:model-value="selected = 'windows'"
 				prev="i-devicon-windows11"
 				next="i-devicon-archlinux"
 		/>
 		<TechSwipesCellLite
-				:selected="selected == 'sass'"
-				@select="selected = 'sass'"
+				:model-value="selected == 'sass'"
+				@update:model-value="selected = 'sass'"
 				prev="i-devicon-sass"
 				next="i-devicon-tailwindcss"
 		/>
 		<TechSwipesCellDouble
-				:selected="selected == 'javascript'"
-				@select="selected = 'javascript'"
+				:model-value="selected == 'javascript'"
+				@update:model-value="selected = 'javascript'"
 				class="bg-white"
 				bar-class="bg-black"
 				prev="i-devicon-javascript"
 				:next="['i-devicon-typescript', 'i-devicon-rust']"
 		/>
 		<TechSwipesCellLite
-				:selected="selected == 'nodejs'"
-				@select="selected = 'nodejs'"
+				:model-value="selected == 'nodejs'"
+				@update:model-value="selected = 'nodejs'"
 				prev="i-devicon-nodejs"
 				next="i-devicon-bun"
 		/>
 		<TechSwipesCellLite
-				:selected="selected == 'express'"
-				@select="selected = 'express'"
+				:model-value="selected == 'express'"
+				@update:model-value="selected = 'express'"
 				class="bg-white"
 				prev="i-devicon-express"
 				next="i-devicon-hono"
@@ -55,11 +88,11 @@ const selected = shallowRef("react");
 		<p class="text-2xl">Technologie:</p>
 		<div class="justify-center flex gap-4 text-4xl mt-8">
 			<p>
-				React
+				{{ selectedData.from }}
 			</p>
 			<span>-></span>
 			<p>
-				Vue / Solid
+				{{ selectedData.to }}
 			</p>
 		</div>
 	</div>

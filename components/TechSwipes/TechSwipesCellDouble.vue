@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import TechSwipesCell from '~/components/TechSwipes/TechSwipesCell.vue';
-
 defineProps<{
 	prev: string,
 	next: [string, string],
-	barClass?: string
 }>()
+const model = defineModel<boolean>();
+
 </script>
 
 <template>
-	<TechSwipesCell :selected="selected == 'react'" @select="selected = 'react'">
+	<TechSwipesCell v-model="model">
 		<i class="size-full" :class="prev" />
 		<div class="size-full relative -right-12/10 -top-full">
 			<i class="size-9/20 absolute top-0 left-0" :class="next[0]" />

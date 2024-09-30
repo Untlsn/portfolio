@@ -1,10 +1,5 @@
 <script setup lang="ts">
-defineProps<{
-	selected: boolean
-}>()
-defineEmits<{
-	(e: 'select'): void
-}>()
+const model = defineModel<boolean>()
 
 </script>
 
@@ -12,8 +7,8 @@ defineEmits<{
 	<CheckboxRoot
 			as="li"
 			name="tech-swipes-cell"
-			:checked="selected"
-			@update:checked="$emit('select')"
+			:checked="model"
+			@update:checked="model = $event"
 			class="size-32 mb-4 p-4 bg-white rounded-lg
 			children:(transition-transform duration-500 delay-200 hover:-translate-x-12/10) overflow-hidden jumping-first
 			border-6 data-[state=checked]:border-#C91E7A"
