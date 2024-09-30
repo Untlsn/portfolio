@@ -1,43 +1,68 @@
 <script setup lang="ts">
 import TechSwipesCell from '~/components/TechSwipes/TechSwipesCell.vue'
 import TechSwipesCellLite from '~/components/TechSwipes/TechSwipesCellLite.vue';
+import TechSwipesCellDouble from '~/components/TechSwipes/TechSwipesCellDouble.vue';
+
+const selected = shallowRef("react");
 </script>
 
 <template>
 <article class="m-20">
-	<header class="text-10 font-bold mb-8">Technologie i alternatywy:</header>
-
+	<header class="text-10 font-bold">Technologie i alternatywy:</header>
+	<p class="mt-4 mb-8 text-lg">Znam i uzywam tych technologi, ale zdecydowanie bardziej wole te alternatywy:</p>
 	<ul class="grid-(~ cols-fit-32) gap-4 justify-center">
-		<TechSwipesCell>
-			<i class="i-devicon-react size-full" />
-			<div class="size-full relative -right-12/10 -top-full">
-				<i class="size-1/2 i-devicon-vuejs absolute top-0 left-0" />
-				<span class="block rotate-45 w-1 h-full bg-white absolute inset-0 mx-auto"></span>
-				<i class="size-1/2 i-devicon-solidjs absolute bottom-0 right-0" />
-			</div>
-		</TechSwipesCell>
-		<TechSwipesCellLite
-			prev="i-devicon-windows11"
-			next="i-devicon-archlinux"
+		<TechSwipesCellDouble
+				:selected="selected == 'react'"
+				@select="selected = 'react'"
+				prev="i-devicon-react"
+				:next="['i-devicon-vuejs', 'i-devicon-solidjs']"
 		/>
 		<TechSwipesCellLite
+				:selected="selected == 'windows'"
+				@select="selected = 'windows'"
+				prev="i-devicon-windows11"
+				next="i-devicon-archlinux"
+		/>
+		<TechSwipesCellLite
+				:selected="selected == 'sass'"
+				@select="selected = 'sass'"
 				prev="i-devicon-sass"
 				next="i-devicon-tailwindcss"
 		/>
-		<TechSwipesCellLite
+		<TechSwipesCellDouble
+				:selected="selected == 'javascript'"
+				@select="selected = 'javascript'"
+				class="bg-white"
+				bar-class="bg-black"
 				prev="i-devicon-javascript"
-				next="i-devicon-typescript"
+				:next="['i-devicon-typescript', 'i-devicon-rust']"
 		/>
 		<TechSwipesCellLite
+				:selected="selected == 'nodejs'"
+				@select="selected = 'nodejs'"
 				prev="i-devicon-nodejs"
 				next="i-devicon-bun"
 		/>
 		<TechSwipesCellLite
+				:selected="selected == 'express'"
+				@select="selected = 'express'"
 				class="bg-white"
 				prev="i-devicon-express"
 				next="i-devicon-hono"
 		/>
 	</ul>
+	<div>
+		<p class="text-2xl">Technologie:</p>
+		<div class="justify-center flex gap-4 text-4xl mt-8">
+			<p>
+				React
+			</p>
+			<span>-></span>
+			<p>
+				Vue / Solid
+			</p>
+		</div>
+	</div>
 </article>
 </template>
 
