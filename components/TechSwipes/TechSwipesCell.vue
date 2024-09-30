@@ -17,7 +17,7 @@ const model = defineModel<boolean>()
 	</CheckboxRoot>
 </template>
 
-<style scoped>
+<style>
 .jumping-first > *:first-child {
 	animation: jumping 1s infinite alternate ease-in-out;
 }

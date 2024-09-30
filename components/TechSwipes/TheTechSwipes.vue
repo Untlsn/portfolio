@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TechSwipesCell from '~/components/TechSwipes/TechSwipesCell.vue'
 import TechSwipesCellLite from '~/components/TechSwipes/TechSwipesCellLite.vue';
 import TechSwipesCellDouble from '~/components/TechSwipes/TechSwipesCellDouble.vue';
+import BaseHeadSkip from '~/components/BaseHeadSkip.vue';
 
 const selected = shallowRef('react');
 watchEffect(() => {
@@ -41,7 +41,7 @@ const selectedData = computed(() => {
 
 <template>
 <article class="m-20">
-	<header class="text-10 font-bold">Technologie i alternatywy:</header>
+	<BaseHeadSkip class="text-10 font-bold">Technologie i alternatywy:</BaseHeadSkip>
 	<p class="mt-4 mb-8 text-lg">Znam i uzywam tych technologi, ale zdecydowanie bardziej wole te alternatywy:</p>
 	<ul class="grid-(~ cols-fit-32) gap-4 justify-center">
 		<TechSwipesCellDouble
