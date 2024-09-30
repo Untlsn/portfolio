@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TechSwipesCellLite from '~/components/TechSwipes/TechSwipesCellLite.vue';
 import TechSwipesCellDouble from '~/components/TechSwipes/TechSwipesCellDouble.vue';
-import BaseHeadSkip from '~/components/BaseHeadSkip.vue';
+import BaseHeadSkipDouble from '~/components/BaseHeadSkipDouble.vue';
 
 const selected = shallowRef('react');
 watchEffect(() => {
@@ -41,47 +41,49 @@ const selectedData = computed(() => {
 
 <template>
 <article class="m-20">
-	<BaseHeadSkip class="text-10 font-bold">Technologie i alternatywy:</BaseHeadSkip>
-	<p class="mt-4 mb-8 text-lg">Znam i uzywam tych technologi, ale zdecydowanie bardziej wole te alternatywy:</p>
+	<BaseHeadSkipDouble>
+		Technologie i alternatywy:
+		<template #description>Znam i uzywam tych technologi, ale zdecydowanie bardziej wole te alternatywy:</template>
+	</BaseHeadSkipDouble>
 	<ul class="grid-(~ cols-fit-32) gap-4 justify-center">
 		<TechSwipesCellDouble
 				:model-value="selected == 'react'"
-				@update:model-value="selected = 'react'"
 				prev="i-devicon-react"
 				:next="['i-devicon-vuejs', 'i-devicon-solidjs']"
+				@update:model-value="selected = 'react'"
 		/>
 		<TechSwipesCellLite
 				:model-value="selected == 'windows'"
-				@update:model-value="selected = 'windows'"
 				prev="i-devicon-windows11"
 				next="i-devicon-archlinux"
+				@update:model-value="selected = 'windows'"
 		/>
 		<TechSwipesCellLite
 				:model-value="selected == 'sass'"
-				@update:model-value="selected = 'sass'"
 				prev="i-devicon-sass"
 				next="i-devicon-tailwindcss"
+				@update:model-value="selected = 'sass'"
 		/>
 		<TechSwipesCellDouble
 				:model-value="selected == 'javascript'"
-				@update:model-value="selected = 'javascript'"
 				class="bg-white"
 				bar-class="bg-black"
 				prev="i-devicon-javascript"
 				:next="['i-devicon-typescript', 'i-devicon-rust']"
+				@update:model-value="selected = 'javascript'"
 		/>
 		<TechSwipesCellLite
 				:model-value="selected == 'nodejs'"
-				@update:model-value="selected = 'nodejs'"
 				prev="i-devicon-nodejs"
 				next="i-devicon-bun"
+				@update:model-value="selected = 'nodejs'"
 		/>
 		<TechSwipesCellLite
 				:model-value="selected == 'express'"
-				@update:model-value="selected = 'express'"
 				class="bg-white"
 				prev="i-devicon-express"
 				next="i-devicon-hono"
+				@update:model-value="selected = 'express'"
 		/>
 	</ul>
 	<div>

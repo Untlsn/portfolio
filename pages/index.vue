@@ -2,13 +2,14 @@
 import TheHeader from '~/components/TheHeader.vue';
 import TheTechSwipes from '~/components/TechSwipes/TheTechSwipes.vue';
 import { createHeadStack } from '~/composables/headSkipStack';
+import TheTechTrivia from '~/components/TheTechTrivia.vue';
 
 createHeadStack();
 </script>
 
 <template>
 	<TheHeader />
-	<main>
+	<main v-bind="$attrs">
 		<article class="min-h-95vh grid-(~ cols-2) place-items-center mx-1/8">
 			<div>
 				<h1 class="text-20">
@@ -40,6 +41,7 @@ createHeadStack();
 			</nav>
 		</article>
 		<TheTechSwipes />
+		<TheTechTrivia />
 	</main>
 </template>
 

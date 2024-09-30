@@ -8,10 +8,10 @@ const model = defineModel<boolean>()
 			as="li"
 			name="tech-swipes-cell"
 			:checked="model"
-			@update:checked="model = $event"
 			class="size-32 mb-4 p-4 bg-white rounded-lg
-			children:(transition-transform duration-500 delay-200 hover:-translate-x-12/10) overflow-hidden jumping-first
-			border-6 data-[state=checked]:border-#C91E7A"
+			children:(transition-transform duration-500 delay-200 hover:-translate-x-12/10 data-[state=checked]:-translate-x-12/10) overflow-hidden jumping-first
+			border-6 data-[state=checked]:border-[#C91E7A]"
+			@update:checked="model = $event"
 	>
 		<slot />
 	</CheckboxRoot>
@@ -23,7 +23,7 @@ const model = defineModel<boolean>()
 }
 
 @keyframes jumping {
-	from { translate: .2rem 0 }
-	to { translate: -.5rem 0 }
+	from { translate: 2px 0 }
+	to { translate: 4px 0 }
 }
 </style>
