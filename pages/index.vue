@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import TheHeader from '~/components/TheHeader.vue';
-import { createHeadStack } from '~/composables/headSkipStack';
 import TheTechFrontend from '~/components/TechFrontend/TheTechFrontend.vue';
-
-createHeadStack();
 </script>
 
 <template>

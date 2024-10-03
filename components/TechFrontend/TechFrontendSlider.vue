@@ -1,25 +1,32 @@
 <script setup lang="ts">
+import useIsVisible from '~/composables/useIsVisible';
+
 const props = defineProps<{
 	data: { icon: string; label: string; link: string }[];
-	columns?: boolean;
-	visible?: boolean;
+	reverse?: boolean;
 }>();
+const [target, visible] = useIsVisible();
 </script>
 
 <template>
-	<div class="flex gap-4 data-[columns]:flex-col" :data-columns="columns || undefined">
-		<div class="size-20 p-2 bg-gray-8 rounded-lg absolute z-1" />
-		<a
-			v-for="(it, i) in props.data"
-			:key="it.label"
-			class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label hover:before:(content-[attr(aria-label)] absolute left-0 text-right text-lg capitalize mt-4 -z-1)"
-			:class="[it.icon, !i && 'z-1']"
-			:style="{ transform: visible ? '' : `translate${columns ? 'Y' : 'X'}(-${i * 6}rem)` }"
-			:data-visible="visible || undefined"
-			:aria-label="it.label"
-			:href="it.link"
-			target="_blank"
-		/>
+	<div>
+		<h3 class="text-xl font-semibold mb-4">
+			<slot />
+		</h3>
+		<div ref="target" class="flex gap-4 data-[reverce]:flex-row-reverse" :data-reverce="reverse || undefined">
+			<div class="size-20 p-2 bg-gray-8 rounded-lg absolute z-1" />
+			<a
+				v-for="(it, i) in props.data"
+				:key="it.label"
+				class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label hover:before:(content-[attr(aria-label)] absolute left-0 text-right text-lg capitalize mt-4 -z-1)"
+				:class="[it.icon, !i && 'z-1']"
+				:style="{ transform: visible ? '' : `translateX(${reverse ? '' : '-'}${i * 6}rem)` }"
+				:data-visible="visible || undefined"
+				:aria-label="it.label"
+				:href="it.link"
+				target="_blank"
+			/>
+		</div>
 	</div>
 </template>
 
@@ -27,7 +34,7 @@ const props = defineProps<{
 .before-label:hover::before {
 	animation: from-top forwards 1s;
 }
-[data-columns] .before-label:hover::before {
+[data-reverce] .before-label:hover::before {
 	animation-name: from-right;
 }
 
