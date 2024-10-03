@@ -9,17 +9,19 @@ import {
 	transformerVariantGroup,
 } from 'unocss';
 
-
 export default defineConfig({
 	theme: {
 	},
+	rules: [
+		['c_', { content: '\'\\00a0\'' }],
+	],
 	shortcuts: [
 		// hocus:bg-black -> hover:bg-black focus:bg-black
 		[/hocus:(.+)/, ([,content]) => {
 			return `hover:${content} focus:${content}`;
 		}],
 		// max-size-40 -> max-h-40 max-w-40
-		[/((min|max)-)?size-(.+)/, function([, prefix = '', , value]) {
+		[/((min|max)-)?size-(.+)/, function ([, prefix = '', , value]) {
 			if (value?.endsWith('v')) {
 				return `${prefix}w-${value}w ${prefix}h-${value}h`;
 			}
@@ -35,8 +37,8 @@ export default defineConfig({
 		}],
 		/** grid-cols-fit-100 -> grid-template-columns: repeat(auto-fit, minmax(400, 1fr)); */
 		[/^grid-(cols|rows)-fit-(\S+)$/, ([, type, value]) => {
-			let numValue = Number(value);
-			if (!Number.isNaN(numValue)) value = `${numValue / 4}rem`
+			const numValue = Number(value);
+			if (!Number.isNaN(numValue)) value = `${numValue / 4}rem`;
 			return `grid-${type}-[repeat(auto-fit,minmax(${value},1fr))]`;
 		}],
 	],
@@ -46,16 +48,16 @@ export default defineConfig({
 		presetTypography(),
 		presetWebFonts({
 			fonts: {
-				sans: 'Roboto',
+				sans: 'Lato',
 			},
 		}),
 		presetIcons({
 			extraProperties: {
-				display:       'inline-block',
-				height:        'auto',
-				'min-height':  '1em',
+				'display': 'inline-block',
+				'height': 'auto',
+				'min-height': '1em',
 				'white-space': 'nowrap',
-			}
+			},
 		}),
 	],
 	transformers: [
