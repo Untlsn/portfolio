@@ -6,7 +6,7 @@ import TheLanding from '~/components/TheLanding.vue';
 
 <template>
 	<TheHeader />
-	<main v-bind="$attrs">
+	<main class="">
 		<TheLanding />
 		<TheTechFrontend />
 	</main>
@@ -21,5 +21,12 @@ import TheLanding from '~/components/TheLanding.vue';
 	from { opacity: 0 }
 	50% { opacity: 5 }
 	to { opacity: 0 }
+}
+</style>
+
+<style>
+body {
+	background: #15051C;
+	@apply min-h-screen text-white;
 }
 </style>

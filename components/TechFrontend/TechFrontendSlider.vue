@@ -14,7 +14,7 @@ const [target, visible] = useIsVisible();
 			<slot />
 		</h3>
 		<div ref="target" class="flex gap-4 data-[reverce]:flex-row-reverse" :data-reverce="reverse || undefined">
-			<div class="size-20 p-2 bg-gray-8 rounded-lg absolute z-1" />
+			<div class="size-20 p-2 bg-[#7C1148]/10 box-shadow rounded-lg absolute z-1" />
 			<a
 				v-for="(it, i) in props.data"
 				:key="it.label"
@@ -31,6 +31,9 @@ const [target, visible] = useIsVisible();
 </template>
 
 <style scoped>
+.box-shadow {
+	box-shadow: 0 0 32px #7C1148B2;
+}
 .before-label:hover::before {
 	animation: from-top forwards 1s;
 }
