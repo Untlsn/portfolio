@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import TheHeader from '~/components/TheHeader.vue';
-import TheTechSwipes from '~/components/TechSwipes/TheTechSwipes.vue';
 import { createHeadStack } from '~/composables/headSkipStack';
-import TheTechTrivia from '~/components/TheTechTrivia.vue';
-
+import TheTechFrontend from '~/components/TechFrontend/TheTechFrontend.vue';
 createHeadStack();
 </script>
 
@@ -40,8 +38,7 @@ createHeadStack();
 				</ul>
 			</nav>
 		</article>
-		<TheTechSwipes />
-		<TheTechTrivia />
+		<TheTechFrontend />
 	</main>
 </template>
 
