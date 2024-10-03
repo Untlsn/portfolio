@@ -2,26 +2,26 @@
 import BaseTypeingText from '~/components/BaseTypeingText.vue';
 import { createChain } from '~/composables/chainContext';
 
-const chain = createChain(true);
+createChain(true);
 </script>
 
 <template>
-	<div class="flex mx-20 mt-60 gap-12 justify-between">
+	<div class="flex mx-8 mt-40 justify-between relative">
 		<div class="min-h-screen">
-			<article class="flex-(~ wrap) gap-20">
-				<h1 class="text-16 lg:text-24 grid-(~ cols-[1fr_6rem]) w-min">
-					<span class="block"><BaseTypeingText start text="Cześć" /></span>
-					<span class="block rotate-90 w-8 h-38 -translate-y-12 lg:translate-x-8 row-span-2">
+			<article class="flex-(~ wrap) items-center gap-20">
+				<h1 class="text-16 lg:text-24 w-min relative pr-28 min-h-38.5">
+					<span class="block bg-clip-text text-transparent bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]"><BaseTypeingText start text="Cześć" /></span>
+					<span class="absolute -right-16 top-24 block w-64 bg-clip-text text-transparent bg-gradient-to-rt from-[#1E88DA] to-[#F4298A] rotate-90">
 						<BaseTypeingText text="Tutaj" />
 					</span>
+					<i class="i-ph-caret-right-bold absolute bottom-2 -left-4 blinking bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]" />
 					<span
-						class="text-end relative block before:(i-ph-caret-right-bold absolute top-0 -left-4 blinking)"
-						:class="chain[2] && 'before:c_'"
+						class="text-end relative block bg-clip-text text-transparent bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]"
 					>
 						<BaseTypeingText text="Filip" reverce />
 					</span>
 				</h1>
-				<ul class="list-disc text-6 lg:text-9">
+				<ul class="list-disc text-6 lg:text-9 pl-6">
 					<li class="empty:hidden">
 						<BaseTypeingText text="Web desinger" />
 					</li>
@@ -37,7 +37,7 @@ const chain = createChain(true);
 				</ul>
 			</article>
 		</div>
-		<nav class="show-from-right">
+		<nav class="show-from-right relative">
 			<h2 class="text-8">
 				Media
 			</h2>
@@ -75,8 +75,8 @@ const chain = createChain(true);
 @keyframes show-from-right {
 	from { translate: 100vw }
 }
-.before\:blinking::before {
-	animation: blinking .8s 4 steps(2, end);
+.blinking {
+	animation: blinking .8s 5 steps(2, end);
 	opacity: var(--opacity);
 }
 

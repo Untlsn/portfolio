@@ -3,7 +3,7 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 </script>
 
 <template>
-	<article class="p-12">
+	<article class="mx-8">
 		<h2 class="text-12 mb-6">
 			Frontend:
 		</h2>

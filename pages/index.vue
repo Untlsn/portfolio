@@ -2,10 +2,21 @@
 import TheHeader from '~/components/TheHeader.vue';
 import TheTechFrontend from '~/components/TechFrontend/TheTechFrontend.vue';
 import TheLanding from '~/components/TheLanding.vue';
+import { colors } from '~/data/colors';
 </script>
 
 <template>
 	<TheHeader />
+	<div
+		v-for="(it, i) in colors"
+		:key="i"
+		class="absolute left-0 size-0"
+		:style="{
+			'top': `${it.top}px`,
+			'left': it.left,
+			'box-shadow': `0 0 10rem 12rem hsla(${it.tone},61%,54%,0.25)`,
+		}"
+	/>
 	<main class="">
 		<TheLanding />
 		<TheTechFrontend />
