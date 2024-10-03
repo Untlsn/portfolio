@@ -14,7 +14,7 @@ const props = defineProps<{
 		<i
 				v-for="(it, i) in props.icons.map((icon, index) => ({ icon, label: props.labels[index] }))"
 				:key="it.label"
-				class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 before-label"
+				class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer content-[attr(aria-label)] absolute left-0 text-right text-lg capitalize mt-4 -z-1"
 				:class="[it.icon, !i && 'z-1']"
 				:style="{ transform: visible ? '' : `translate${columns ? 'Y' : 'X'}(-${i * 6}rem)` }"
 				:data-visible="visible || undefined"
@@ -24,11 +24,7 @@ const props = defineProps<{
 </template>
 
 <style scoped>
-.before-label {
-	@apply relative cursor-pointer;
-}
 .before-label:hover::before {
-	@apply content-[attr(aria-label)] absolute left-0 text-right text-lg capitalize mt-4 -z-1;
 	animation: from-top forwards 1s;
 }
 [data-columns] .before-label:hover::before {
