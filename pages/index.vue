@@ -2,6 +2,7 @@
 import TheHeader from '~/components/TheHeader.vue';
 import { createHeadStack } from '~/composables/headSkipStack';
 import TheTechFrontend from '~/components/TechFrontend/TheTechFrontend.vue';
+
 createHeadStack();
 </script>
 
@@ -14,21 +15,23 @@ createHeadStack();
 					Cześć.
 				</h1>
 				<div
-						class="border-l-([#C91E7A] 2) pl-12 relative before-animate-blink before:(content-['>'] absolute left-4 top-2 text-[#C91E7A] text-xs scale-y-300 scale-x-150)"
+					class="border-l-([#C91E7A] 2) pl-12 relative before-animate-blink before:(content-['>'] absolute left-4 top-2 text-[#C91E7A] text-xs scale-y-300 scale-x-150)"
 				>
-				<p class="my-4">
-					Jestem Filip Skoczeń. Mieszkam całe życie w mniejszej wsi w okolicach Nowego Sącza.
-					Przygodę z programowaniem zacząłem w połowie technikum (~16 lat)
-					chcąc zrobić aplikacje pokazującą najbliższy autobus do szkoły.
-					A teraz jestem frontend developerem z dużym doświadczeniem i większymi ambicjami.
-				</p>
-				<p>
-					Uwielbiam niszowe i nowoczesne rozwiązania, a w szczególności przekonywać do nich innych
-				</p>
-			</div>
+					<p class="my-4">
+						Jestem Filip Skoczeń. Mieszkam całe życie w mniejszej wsi w okolicach Nowego Sącza.
+						Przygodę z programowaniem zacząłem w połowie technikum (~16 lat)
+						chcąc zrobić aplikacje pokazującą najbliższy autobus do szkoły.
+						A teraz jestem frontend developerem z dużym doświadczeniem i większymi ambicjami.
+					</p>
+					<p>
+						Uwielbiam niszowe i nowoczesne rozwiązania, a w szczególności przekonywać do nich innych
+					</p>
+				</div>
 			</div>
 			<nav>
-				<h3 class="text-2xl font-bold">Lista projektów</h3>
+				<h3 class="text-2xl font-bold">
+					Lista projektów
+				</h3>
 				<ul class="relative p-12 mt-4">
 					<li aria-hidden="true" class="absolute size-1/2 top-0 left-0 border-(t-3 l-4 [#C91E7A]) rounded-xl" />
 					<li>Projekt a</li>

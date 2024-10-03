@@ -1,24 +1,24 @@
 <script setup lang="ts">
 const props = defineProps<{
-	icons: string[],
-	labels: string[],
-	columns?: boolean,
-	visible?: boolean
+	data: { icon: string; label: string; link: string }[];
+	columns?: boolean;
+	visible?: boolean;
 }>();
-
 </script>
 
 <template>
 	<div class="flex gap-4 data-[columns]:flex-col" :data-columns="columns || undefined">
 		<div class="size-20 p-2 bg-gray-8 rounded-lg absolute z-1" />
-		<i
-				v-for="(it, i) in props.icons.map((icon, index) => ({ icon, label: props.labels[index] }))"
-				:key="it.label"
-				class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer content-[attr(aria-label)] absolute left-0 text-right text-lg capitalize mt-4 -z-1"
-				:class="[it.icon, !i && 'z-1']"
-				:style="{ transform: visible ? '' : `translate${columns ? 'Y' : 'X'}(-${i * 6}rem)` }"
-				:data-visible="visible || undefined"
-				:aria-label="it.label"
+		<a
+			v-for="(it, i) in props.data"
+			:key="it.label"
+			class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label hover:before:(content-[attr(aria-label)] absolute left-0 text-right text-lg capitalize mt-4 -z-1)"
+			:class="[it.icon, !i && 'z-1']"
+			:style="{ transform: visible ? '' : `translate${columns ? 'Y' : 'X'}(-${i * 6}rem)` }"
+			:data-visible="visible || undefined"
+			:aria-label="it.label"
+			:href="it.link"
+			target="_blank"
 		/>
 	</div>
 </template>
