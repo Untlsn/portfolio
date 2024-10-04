@@ -6,42 +6,40 @@ createChain(true);
 </script>
 
 <template>
-	<div class="flex mx-8 mt-40 justify-between relative">
-		<div class="min-h-screen">
-			<article class="flex-(~ wrap) items-center gap-20">
-				<h1 class="text-16 lg:text-24 w-min relative pr-28 min-h-38.5">
-					<span class="block bg-clip-text text-transparent bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]"><BaseTypeingText start text="Cześć" /></span>
-					<span class="absolute -right-16 top-24 block w-64 bg-clip-text text-transparent bg-gradient-to-rt from-[#1E88DA] to-[#F4298A] rotate-90">
-						<BaseTypeingText text="Tutaj" />
-					</span>
-					<i class="i-ph-caret-right-bold absolute bottom-2 -left-4 blinking bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]" />
-					<span
-						class="text-end relative block bg-clip-text text-transparent bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]"
-					>
-						<BaseTypeingText text="Filip" reverce />
-					</span>
-				</h1>
-				<ul class="list-disc text-6 lg:text-9 pl-6">
-					<li class="empty:hidden">
-						<BaseTypeingText text="Web desinger" />
-					</li>
-					<li class="empty:hidden">
-						<BaseTypeingText text="Web desinger" />
-					</li>
-					<li class="empty:hidden">
-						<BaseTypeingText text="FOOS enjoyer" />
-					</li>
-					<li class="empty:hidden">
-						<BaseTypeingText text="Father" />
-					</li>
-				</ul>
-			</article>
-		</div>
-		<nav class="show-from-right relative">
-			<h2 class="text-8">
+	<article class="flex-(~ wrap) mx-8 my-40 justify-between relative gap-20">
+		<h1 class="text-16 lg:text-32 w-min relative pr-28 lg:ml-40 grid-(~ cols-auto-2)">
+			<span class="block bg-clip-text text-transparent bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]">
+				<BaseTypeingText text="Cześć" filled />
+			</span>
+			<span class="row-span-2 block w-max bg-clip-text text-transparent bg-gradient-to-rt from-[#1E88DA] to-[#F4298A] write-vertical-right">
+				<BaseTypeingText text="Tutaj" filled />
+			</span>
+			<i class="i-ph-caret-right-bold absolute bottom-2 -left-4 blinking bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]" />
+			<span
+				class="text-end relative block bg-clip-text text-transparent bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]"
+			>
+				<BaseTypeingText text="Filip" filled reverce />
+			</span>
+		</h1>
+		<ul class="list-disc text-6 lg:text-9 pl-6">
+			<li class="empty:hidden">
+				<BaseTypeingText text="Web desinger" />
+			</li>
+			<li class="empty:hidden">
+				<BaseTypeingText text="Web desinger" />
+			</li>
+			<li class="empty:hidden">
+				<BaseTypeingText text="FOOS enjoyer" />
+			</li>
+			<li class="empty:hidden">
+				<BaseTypeingText text="Father" />
+			</li>
+		</ul>
+		<nav class="show-from-right relative lg:text-8 ml-auto">
+			<h2 class="text-2em">
 				Media
 			</h2>
-			<ul class="pl-4 text-4 leading-6">
+			<ul class="pl-4 text-1em leading-6 text-nowrap lg:space-y-4">
 				<li class="before:(c_ i-line-md-github)">
 					<a href="https://github.com/untlsn" target="_blank">
 						Github
@@ -64,7 +62,7 @@ createChain(true);
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</article>
 </template>
 
 <style scoped>

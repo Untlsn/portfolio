@@ -4,6 +4,7 @@ import { useChain } from '~/composables/chainContext';
 const props = defineProps<{
 	text: string;
 	reverce?: boolean;
+	filled?: boolean;
 }>();
 
 const curText = shallowRef(props.text);
@@ -30,7 +31,7 @@ onMounted(async () => {
 </script>
 
 <template>
-	{{ curText }}
+	{{ curText || filled && '&nbsp;' || '' }}
 </template>
 
 <style scoped>
