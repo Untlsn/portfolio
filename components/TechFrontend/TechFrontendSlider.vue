@@ -9,7 +9,7 @@ const [target, visible] = useIsVisible();
 </script>
 
 <template>
-	<div>
+	<div class="p-6 border-(b white/10)">
 		<h3 class="text-5 font-semibold mb-4">
 			<slot />
 		</h3>

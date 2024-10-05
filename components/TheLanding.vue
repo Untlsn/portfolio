@@ -21,26 +21,28 @@ createChain(true);
 			<TheLandingImage />
 		</h1>
 	</div>
-	<article class="lg:grid-(~ cols-2) justify-between text-5 border-(y white/10)">
-		<ul class="list-disc opacity-75 p-8 pl-16 pt-16 lg:space-y-4 border-b lg:border-r border-white/10">
-			<li class="empty:hidden">
-				<BaseTypingText text="Web desinger" />
+	<article class="flex-(~ wrap) children:flex-1 justify-between text-5 border-(y white/10) text-nowrap">
+		<ul
+			class="list-disc opacity-75 p-8 pt-16 lg:space-y-4 border-(b r white/10)"
+		>
+			<li class="empty:hidden ml-6 move-from-left">
+				Web desinger
 			</li>
-			<li class="empty:hidden">
-				<BaseTypingText text="Web desinger" />
+			<li class="empty:hidden ml-6 move-from-left">
+				Web desinger
 			</li>
-			<li class="empty:hidden">
-				<BaseTypingText text="FOOS enjoyer" />
+			<li class="empty:hidden ml-6 move-from-left">
+				FOOS enjoyer
 			</li>
-			<li class="empty:hidden">
-				<BaseTypingText text="Father" />
+			<li class="empty:hidden ml-6 move-from-left">
+				Father
 			</li>
 		</ul>
-		<nav class="relative p-8 opacity-75">
+		<nav class="relative p-8 opacity-75 move-from-right">
 			<h2 class="text-8 h-16">
 				Media
 			</h2>
-			<ul class="pl-4 text-nowrap lg:space-y-4">
+			<ul class="pl-4 lg:space-y-4">
 				<li class="before:(c_ i-line-md-github)">
 					<a href="https://github.com/untlsn" target="_blank">
 						Github
@@ -67,5 +69,19 @@ createChain(true);
 </template>
 
 <style scoped>
+.move-from-left {
+	--from: -100vw;
+	animation: move-from .5s ease-in-out 1s forwards;
+	translate: var(--from) 0;
+}
+.move-from-right {
+	--from: 100vw;
+	animation: move-from .5s ease-in-out 1s forwards;
+	translate: var(--from) 0;
+}
 
+@keyframes move-from {
+	from { translate: var(--from) 0 }
+	to { translate: 0 0 }
+}
 </style>
