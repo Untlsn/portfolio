@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseTypingText from '~/components/BaseTypingText.vue';
 import { createChain } from '~/composables/chainContext';
+import TheLandingImage from '~/components/TheLandingImage.vue';
 
 createChain(true);
 </script>
@@ -17,11 +18,7 @@ createChain(true);
 			<span class="col-start-3 row-start-2 write-vertical-left text-clip-gradient bg-gradient-to-t">
 				<BaseTypingText text="Filip" filled />
 			</span>
-			<img
-				src="/logo-color.svg"
-				alt="logo"
-				class="col-start-2 row-start-2 m-auto"
-			>
+			<TheLandingImage />
 		</h1>
 		<!--		<h1 class="text-16 lg:text-32 w-min relative pr-28 lg:ml-40 grid-(~ cols-auto-2)"> -->
 		<!--			<span class="block bg-clip-text text-transparent bg-gradient-to-rb from-[#1E88DA] to-[#F4298A]"> -->

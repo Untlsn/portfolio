@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useChain } from '~/composables/chainContext';
+import { useChainTimeout } from '~/composables/chainContext';
 
 const props = defineProps<{
 	text: string;
@@ -7,33 +7,30 @@ const props = defineProps<{
 	filled?: boolean;
 }>();
 
-const curText = shallowRef(props.text);
-
-const chainState = useChain();
-
-onMounted(async () => {
-	curText.value = '';
-	const text = props.text;
-
-	watchEffect(() => {
-		if (!chainState.value) return;
-		const interval = setInterval(() => {
-			const curLen = curText.value.length;
-			if (curLen < text.length) {
-				curText.value = props.reverse ? text.slice(-curLen - 1) : text.slice(0, curLen + 1);
-				return;
-			}
-			clearInterval(interval);
-			chainState.value = true;
-		}, 50);
-	});
-});
+const chainState = useChainTimeout(50 * props.text.length);
 </script>
 
 <template>
-	{{ curText || filled && '&nbsp;' || '' }}
+	<span
+		v-for="(letter, i) in text"
+		:key="letter"
+		:style="{ '--wait': `${i * 50}ms` }"
+		class="invisible"
+		:class="chainState && 'show-after'"
+	>
+		{{ letter }}
+	</span>
 </template>
 
 <style scoped>
+.show-after {
+	--wait: 0;
+	animation: show-after 50ms forwards linear;
+	animation-delay: var(--wait);
+}
 
+@keyframes show-after {
+	from { visibility: hidden }
+	to { visibility: visible }
+}
 </style>

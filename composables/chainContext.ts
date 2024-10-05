@@ -13,12 +13,22 @@ export function useChain() {
 	const lengthSnap = data.value.length;
 	data.value.push(false);
 
-	return computed({
-		get() {
+	return {
+		get current() {
 			return data.value[lengthSnap - 1];
 		},
-		set(value) {
-			data.value[lengthSnap] = value;
+		finish() {
+			data.value[lengthSnap] = true;
 		},
+	};
+}
+
+export function useChainTimeout(ms: number): ComputedRef<boolean> {
+	const state = useChain();
+
+	watchEffect(() => {
+		if (state.current) setTimeout(state.finish, ms);
 	});
+
+	return computed(() => state.current);
 }
