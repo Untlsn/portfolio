@@ -10,7 +10,7 @@ import { colors } from '~/data/colors';
 	<div
 		v-for="(it, i) in colors"
 		:key="i"
-		class="absolute left-0 size-0"
+		class="absolute left-0 size-0 -z-1"
 		:style="{
 			'top': `${it.top}px`,
 			'left': it.left,
