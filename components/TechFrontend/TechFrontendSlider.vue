@@ -10,7 +10,7 @@ const [target, visible] = useIsVisible();
 
 <template>
 	<div>
-		<h3 class="text-xl font-semibold mb-4">
+		<h3 class="text-5 font-semibold mb-4">
 			<slot />
 		</h3>
 		<div ref="target" class="flex gap-4 data-[reverce]:flex-row-reverse" :data-reverce="reverse || undefined">
