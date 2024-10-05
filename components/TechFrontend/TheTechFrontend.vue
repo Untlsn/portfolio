@@ -4,7 +4,7 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 
 <template>
 	<article class="m-8">
-		<h2 class="text-12 mb-6">
+		<h2 class="text-12 mb-6 text-clip-gradient">
 			Frontend:
 		</h2>
 		<div class="flex-(~ wrap) justify-between gap-12">

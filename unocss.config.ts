@@ -10,8 +10,6 @@ import {
 } from 'unocss';
 
 export default defineConfig({
-	theme: {
-	},
 	rules: [
 		['c_', { content: '\'\\00a0\'' }],
 	],
@@ -49,6 +47,7 @@ export default defineConfig({
 		presetWebFonts({
 			fonts: {
 				sans: 'Lato',
+				mono: 'Fira Code',
 			},
 		}),
 		presetIcons({
