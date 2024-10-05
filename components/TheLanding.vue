@@ -8,7 +8,7 @@ createChain(true);
 
 <template>
 	<div class="mt-40 mb-20 relative gap-20">
-		<h1 class="grid-(~ cols-1_1_1 rows-auto-2) max-w-screen gap-6 text-center text-10 lg:text-16">
+		<h1 class="grid-(~ cols-1_1_1 rows-auto-3) max-w-screen gap-6 text-center text-10 lg:text-16">
 			<span class="col-start-1 row-start-2 write-vertical-left rotate-180 text-clip-gradient bg-gradient-to-b">
 				<BaseTypingText text="Cześć" filled />
 			</span>
@@ -19,6 +19,9 @@ createChain(true);
 				<BaseTypingText text="Filip" filled />
 			</span>
 			<TheLandingImage />
+			<span class="col-span-3 row-start-3 text-clip-gradient">
+				<BaseTypingText text="Web Developer" filled />
+			</span>
 		</h1>
 	</div>
 	<article class="flex-(~ wrap) children:flex-1 justify-between text-5 border-(y white/10) text-nowrap">
