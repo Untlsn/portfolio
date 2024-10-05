@@ -69,16 +69,12 @@ createChain(true);
 </template>
 
 <style scoped>
-.move-from-left {
-	--from: -100vw;
+.move-from-left, .move-from-right {
 	animation: move-from .5s ease-in-out 1s forwards;
 	translate: var(--from) 0;
 }
-.move-from-right {
-	--from: 100vw;
-	animation: move-from .5s ease-in-out 1s forwards;
-	translate: var(--from) 0;
-}
+.move-from-left { --from: -100vw }
+.move-from-right { --from: 100vw }
 
 @keyframes move-from {
 	from { translate: var(--from) 0 }
