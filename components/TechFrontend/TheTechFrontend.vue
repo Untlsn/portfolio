@@ -14,6 +14,7 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 					{ icon: 'i-devicon-solidjs', label: 'solidjs', link: 'https://www.solidjs.com/' },
 					{ icon: 'i-devicon-react', label: 'react', link: 'https://react.dev/' },
 					{ icon: 'i-devicon-vuejs', label: 'vuejs', link: 'https://vuejs.org/' },
+					{ icon: 'i-devicon-nestjs', label: 'nestjs', link: 'https://nestjs.com/' },
 				]"
 			>
 				Frameworki:
@@ -23,7 +24,9 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 				:data="[
 					{ icon: 'i-devicon-vitejs', label: 'vitejs', link: 'https://vite.dev/' },
 					{ icon: 'i-devicon-tailwindcss', label: 'tailwind', link: 'https://tailwindcss.com/' },
-					{ icon: 'i-devicon-eslint', label: 'eslint', link: 'https://eslint.org/' },
+					{ icon: 'i-my-chartjs', label: 'chartjs', link: 'https://www.chartjs.org/' },
+					{ icon: 'i-my-leaflet', label: 'leaflet', link: 'https://leafletjs.com/' },
+
 				]"
 				reverse
 			>
@@ -38,5 +41,4 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 </template>
 
 <style scoped>
-
 </style>

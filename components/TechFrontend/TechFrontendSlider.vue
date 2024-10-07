@@ -13,12 +13,12 @@ const [target, visible] = useIsVisible();
 		<h3 class="text-5 font-semibold mb-4">
 			<slot />
 		</h3>
-		<div ref="target" class="flex gap-4 data-[reverce]:flex-row-reverse" :data-reverce="reverse || undefined">
+		<div ref="target" class="flex gap-4" :class="reverse && 'flex-row-reverse'">
 			<div class="size-20 p-2 bg-[#39163F] box-shadow rounded-lg absolute z-1" />
 			<a
 				v-for="(it, i) in props.data"
 				:key="it.label"
-				class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label hover:before:(content-[attr(aria-label)] absolute left-0 text-right text-lg capitalize mt-4 -z-1)"
+				class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label hover:before:(content-[attr(aria-label)] absolute inset-0 w-full text-center text-lg capitalize mt-4 -z-1)"
 				:class="[it.icon, !i && 'z-1']"
 				:style="{ transform: visible ? '' : `translateX(${reverse ? '' : '-'}${i * 6}rem)` }"
 				:data-visible="visible || undefined"
