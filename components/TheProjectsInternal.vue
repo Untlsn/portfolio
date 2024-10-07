@@ -4,7 +4,7 @@ import ProjectsInternalShowcaseLite from '~/components/ProjectsInternalShowcaseL
 
 const opened = shallowRef<string[]>([]);
 
-const all = ['Letssport', 'Światpaliw', 'Projekt', 'Projekt', 'Loximide', 'Nieruchomości', 'Bronisze', 'AI'];
+const all = ['Letssport', 'Światpaliw', 'Projekt rzadowy', 'Loximide', 'Nieruchomości', 'Bronisze', 'AI'];
 </script>
 
 <template>
@@ -32,7 +32,7 @@ const all = ['Letssport', 'Światpaliw', 'Projekt', 'Projekt', 'Loximide', 'Nier
 			<ul>
 				<ProjectsInternalShowcase
 					title="Letssport"
-					description="strona do wynajmowania, tworzenia i uczestniczenia w wydarzeniach sportowych"
+					description="zarządzanie wydarzeniami sportowymi"
 					commitment="Drugożędny frontend developer"
 					time="Kilka miesięcy po rozpoczęciu pracy, trwał 2 lata"
 					skills="Zarządzanie mapami, tworzenie dużych dynamicznych formularzy, praca z websocketem i grapthql, 1 kroki w SSR"
@@ -47,13 +47,6 @@ const all = ['Letssport', 'Światpaliw', 'Projekt', 'Projekt', 'Loximide', 'Nier
 					skills="Głębrze zarządzanie SSR z SolidStart, tworzenie wykresów, pobieranie danych z niewygodnych (HTML) źródeł"
 					href="https://swiatpaliw.com/"
 					src="/screens/swiatpaliw.webp"
-				/>
-				<ProjectsInternalShowcaseLite
-					title="Projekt rzadowy"
-					description="zarządzanie dokumentami i projektami"
-					commitment="Pierwszożędny fullstack developer"
-					time="Pierwsza połowa roku 2023"
-					skills="Tworzenie aplikacji Fullstack z wykożystaniem SolidStart, zarządzanie plikami binarnymi, okiełznanie narzędzi popularnych w rządowych aplikacjach"
 				/>
 				<ProjectsInternalShowcaseLite
 					title="Projekt rzadowy"

@@ -56,7 +56,6 @@ export default defineConfig({
 				'height': 'auto',
 				'min-height': '1em',
 				'white-space': 'nowrap',
-				'color': 'transparent',
 			},
 			collections: {
 				my: {

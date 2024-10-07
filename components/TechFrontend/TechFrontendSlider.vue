@@ -26,7 +26,7 @@ const [target, visible] = useIsVisible();
 				:data-label="it.label"
 				target="_blank"
 			>
-				<i :class="it.icon" class="size-full">{{ it.label }}</i>
+				<i :class="it.icon" class="size-full text-transparent">{{ it.label }}</i>
 			</a>
 		</div>
 	</div>

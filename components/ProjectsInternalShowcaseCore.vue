@@ -13,12 +13,14 @@ defineSlots<{
 </script>
 
 <template>
-	<AccordionItem :value="title" class="px-8 py-2 border-(t white/10) data-[state=open]:py-8 transition-all">
-		<AccordionTrigger class="mb-2 outline-none flex items-center w-full after:(c_ transition-transform data-[state=open]:-rotate-180 i-ph-caret-down-thin text-6 ml-auto opacity-50 hocus:opacity-100)">
+	<AccordionItem :value="title" class="border-(t white/10)">
+		<AccordionTrigger class="min-h-10 px-8 data-[state=open]:(border-b-(~ white/10) min-h-14) outline-none text-left grid-(~ cols-[1fr_auto_4fr_auto_auto]) gap-2 items-center w-full after:(c_ transition-transform data-[state=open]:-rotate-180 i-ph-caret-down-thin text-6 ml-auto opacity-50 hocus:opacity-100)">
 			<slot name="title" />
-			- {{ description }}
+			<span aria-hidden="true" class="border-l-(~ white/10) h-full" />
+			<span class="pl-2">{{ description }}</span>
+			<span aria-hidden="true" class="border-l-(~ white/10) h-full" />
 		</AccordionTrigger>
-		<AccordionContent class="AccordionContent">
+		<AccordionContent class="AccordionContent px-8 py-4">
 			<p class="mt-1">
 				<b>Poziom zaangażowania: </b>{{ commitment }}
 			</p>
