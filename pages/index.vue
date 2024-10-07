@@ -3,7 +3,7 @@ import TheHeader from '~/components/TheHeader.vue';
 import TheTechFrontend from '~/components/TechFrontend/TheTechFrontend.vue';
 import TheLanding from '~/components/Landing/TheLanding.vue';
 import TheBackgroundColors from '~/components/TheBackgroundColors.vue';
-import TheProjectsInternal from '~/components/TheProjectsInternal.vue';
+import TheProjectsInternal from '~/components/Projects/TheProjectsInternal.vue';
 </script>
 
 <template>

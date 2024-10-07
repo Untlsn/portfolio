@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProjectsInternalShowcaseCore from '~/components/ProjectsInternalShowcaseCore.vue';
+import ProjectsInternalShowcaseCore from '~/components/Projects/ProjectsInternalShowcaseCore.vue';
 
 defineProps<{
 	title: string;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ProjectsInternalShowcase from '~/components/ProjectsInternalShowcase.vue';
-import ProjectsInternalShowcaseLite from '~/components/ProjectsInternalShowcaseLite.vue';
+import ProjectsInternalShowcase from '~/components/Projects/ProjectsInternalShowcase.vue';
+import ProjectsInternalShowcaseLite from '~/components/Projects/ProjectsInternalShowcaseLite.vue';
 
 const opened = shallowRef<string[]>([]);
 

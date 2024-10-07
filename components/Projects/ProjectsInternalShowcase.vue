@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ProjectsScreenshotShow from '~/components/ProjectsScreenshotShow.vue';
-import ProjectsInternalShowcaseCore from '~/components/ProjectsInternalShowcaseCore.vue';
+import ProjectsScreenshotShow from '~/components/Projects/ProjectsScreenshotShow.vue';
+import ProjectsInternalShowcaseCore from '~/components/Projects/ProjectsInternalShowcaseCore.vue';
 
 defineProps<{
 	title: string;
