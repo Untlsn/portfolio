@@ -13,7 +13,7 @@ defineProps<{
 <template>
 	<ProjectsInternalShowcaseCore v-bind="$props">
 		<template #title>
-			<span>{{ title }}</span>
+			<span class="font-bold text-lg">{{ title }}</span>
 		</template>
 		<p class="text-center">
 			Brak możliwosci pokazania screenshota
