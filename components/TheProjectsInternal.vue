@@ -1,17 +1,34 @@
 <script setup lang="ts">
 import ProjectsInternalShowcase from '~/components/ProjectsInternalShowcase.vue';
 import ProjectsInternalShowcaseLite from '~/components/ProjectsInternalShowcaseLite.vue';
+
+const opened = shallowRef<string[]>([]);
+
+const all = ['Letssport', 'Światpaliw', 'Projekt', 'Projekt', 'Loximide', 'Nieruchomości', 'Bronisze', 'AI'];
 </script>
 
 <template>
 	<article>
-		<header class="text-5 font-semibold m-4">
-			Wewnętrzne projekty:
-		</header>
+		<div class="flex justify-between m-4">
+			<header class="text-5 font-semibold">
+				Wewnętrzne projekty:
+			</header>
+			<button
+				class="border-y-(~ white/50) border-x-(2 white/10) px-4 py-2 hocus:border-(y-white x-white/50) transition-colors"
+				@click="opened = opened.length ? [] : all"
+			>
+				{{ opened.length ? 'Zamkni wszystkie' : 'Otwórz wszystkie' }}
+			</button>
+		</div>
 		<p class="m-4 text-sm">
 			Niestety ze wzgedu na umowe nie moge pokazać kodu źrudłowego a w niektórych przypadkach nawet strony
 		</p>
-		<AccordionRoot as-child class="" type="multiple">
+		<AccordionRoot
+			v-model="opened"
+			as-child
+			class=""
+			type="multiple"
+		>
 			<ul>
 				<ProjectsInternalShowcase
 					title="Letssport"

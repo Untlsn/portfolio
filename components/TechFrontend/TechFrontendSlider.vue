@@ -18,14 +18,16 @@ const [target, visible] = useIsVisible();
 			<a
 				v-for="(it, i) in props.data"
 				:key="it.label"
-				class="size-16 m-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label hover:before:(content-[attr(aria-label)] absolute inset-0 w-full text-center text-lg capitalize mt-4 -z-1)"
-				:class="[it.icon, !i && 'z-1']"
+				class="size-20 p-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label border-(~ white/10) rounded hover:before:(content-[attr(data-label)] absolute inset-0 w-full text-center text-lg capitalize mt-4 -z-1)"
+				:class="!i && 'z-1'"
 				:style="{ transform: visible ? '' : `translateX(${reverse ? '' : '-'}${i * 6}rem)` }"
 				:data-visible="visible || undefined"
-				:aria-label="it.label"
 				:href="it.link"
+				:data-label="it.label"
 				target="_blank"
-			/>
+			>
+				<i :class="it.icon" class="size-full">{{ it.label }}</i>
+			</a>
 		</div>
 	</div>
 </template>

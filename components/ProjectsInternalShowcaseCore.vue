@@ -14,7 +14,7 @@ defineSlots<{
 
 <template>
 	<AccordionItem :value="title" class="px-8 py-2 border-(t white/10) data-[state=open]:py-8 transition-all">
-		<AccordionTrigger class="mb-2 outline-none">
+		<AccordionTrigger class="mb-2 outline-none flex items-center w-full after:(c_ transition-transform data-[state=open]:-rotate-180 i-ph-caret-down-thin text-6 ml-auto opacity-50 hocus:opacity-100)">
 			<slot name="title" />
 			- {{ description }}
 		</AccordionTrigger>
