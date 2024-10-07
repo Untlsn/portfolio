@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BaseTypingText from '~/components/BaseTypingText.vue';
 import { createChain } from '~/composables/chainContext';
-import TheLandingImage from '~/components/TheLandingImage.vue';
+import TheLandingImage from '~/components/Landing/TheLandingImage.vue';
 
 createChain(true);
 </script>
@@ -9,39 +9,27 @@ createChain(true);
 <template>
 	<div class="mt-40 mb-20 relative gap-20">
 		<h1 class="grid-(~ cols-1_1_1 rows-auto-3) max-w-screen gap-6 text-center text-10 lg:text-16">
-			<span class="col-start-1 row-start-2 write-vertical-left rotate-180 text-clip-gradient bg-gradient-to-b">
-				<BaseTypingText text="Cześć" filled />
-			</span>
-			<span class="col-start-2 row-start-1 text-clip-gradient">
-				<BaseTypingText text="Jestem" filled />
-			</span>
-			<span class="col-start-3 row-start-2 write-vertical-left text-clip-gradient bg-gradient-to-t">
-				<BaseTypingText text="Filip" filled />
-			</span>
+			<BaseTypingText text="Cześć" class="col-start-1 row-start-2 write-vertical-left rotate-180 bg-gradient-to-b" />
+			<BaseTypingText text="Jestem" class="col-start-2 row-start-1" />
+			<BaseTypingText text="Filip" class="col-start-3 row-start-2 write-vertical-left bg-gradient-to-t" />
 			<TheLandingImage />
-			<span class="col-span-3 row-start-3 text-clip-gradient">
-				<BaseTypingText text="Web Developer" filled />
-			</span>
+			<BaseTypingText text="Web Developer" class="col-span-3 row-start-3" />
 		</h1>
 	</div>
 	<article class="flex-(~ wrap) children:flex-1 justify-between text-5 border-(y white/10) text-nowrap">
 		<ul
 			class="list-disc opacity-75 p-8 pt-16 lg:space-y-4 border-(b r white/10)"
+			style="--from: -100vw"
 		>
-			<li class="empty:hidden ml-6 move-from-left">
-				Web desinger
-			</li>
-			<li class="empty:hidden ml-6 move-from-left">
-				Web desinger
-			</li>
-			<li class="empty:hidden ml-6 move-from-left">
-				FOOS enjoyer
-			</li>
-			<li class="empty:hidden ml-6 move-from-left">
-				Father
+			<li
+				v-for="it in ['Fullstack Dev', 'Tools maintainer', 'App reviver', 'FOOS enjoyer', 'Father']"
+				:key="it"
+				class="ml-6 move-from"
+			>
+				{{ it }}
 			</li>
 		</ul>
-		<nav class="relative p-8 opacity-75 move-from-right">
+		<nav class="relative p-8 opacity-75 move-from" style="--from: 100vw">
 			<h2 class="text-8 h-16">
 				Media
 			</h2>
@@ -72,12 +60,10 @@ createChain(true);
 </template>
 
 <style scoped>
-.move-from-left, .move-from-right {
+.move-from {
 	animation: move-from .5s ease-in-out 1s forwards;
 	translate: var(--from) 0;
 }
-.move-from-left { --from: -100vw }
-.move-from-right { --from: 100vw }
 
 @keyframes move-from {
 	from { translate: var(--from) 0 }

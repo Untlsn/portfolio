@@ -31,8 +31,8 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 			</TechFrontendSlider>
 		</div>
 		<section class="m-6 space-y-4">
-			<p>Frontendem zajmuje się od 2018 roku z czego komercyjnie od 2021. Większość mojej przygody spędziłem pisząc kod w react, ale od 2022 mając większą kontrole nad projektami szala przechyliła się na Vue (to portolio jest napisane w Vue + Nuxt) a w szczegulności SolidJS</p>
-			<p>Podobna sytacja jest w przypadku CSS'a którego aktualnie praktycznie wyłącznie pisze z uzyciem tailwind'a bądz unocss (engine css kompatybilny z tailwind)</p>
+			<p>Frontendem zajmuje się od 2018 roku, z czego komercyjnie od 2021. Większość mojej przygody spędziłem pisząc kod w React, ale od 2022 mając większą kontrolę nad projektami szala przechyliła się na Vue (to portfolio jest napisane w Vue + Nuxt) a w szczególności SolidJS</p>
+			<p>Podobna sytuacja jest w przypadku CSS'a którego aktualnie praktycznie wyłącznie pisze z użyciem tailwind'a bądź unocss (engine css kompatybilny z tailwind)</p>
 		</section>
 	</article>
 </template>

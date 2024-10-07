@@ -4,21 +4,22 @@ import { useChainTimeout } from '~/composables/chainContext';
 const props = defineProps<{
 	text: string;
 	reverse?: boolean;
-	filled?: boolean;
 }>();
 
 const chainState = useChainTimeout(50 * props.text.length);
 </script>
 
 <template>
-	<span
-		v-for="(letter, i) in text"
-		:key="letter"
-		:style="{ '--wait': `${i * 50}ms` }"
-		class="invisible"
-		:class="chainState && 'show-after'"
-	>
-		{{ letter }}
+	<span class="text-clip-gradient">
+		<span
+			v-for="(letter, i) in text"
+			:key="letter"
+			:style="{ '--wait': `${i * 50}ms` }"
+			class="invisible"
+			:class="chainState && 'show-after'"
+		>
+			{{ letter }}
+		</span>
 	</span>
 </template>
 

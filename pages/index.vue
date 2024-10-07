@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TheHeader from '~/components/TheHeader.vue';
 import TheTechFrontend from '~/components/TechFrontend/TheTechFrontend.vue';
-import TheLanding from '~/components/TheLanding.vue';
+import TheLanding from '~/components/Landing/TheLanding.vue';
 import { colors } from '~/data/colors';
 </script>
 
@@ -26,15 +26,6 @@ import { colors } from '~/data/colors';
 </template>
 
 <style scoped>
-.before-animate-blink::before {
-	animation: blink 2s linear infinite;
-}
-
-@keyframes blink {
-	from { opacity: 0 }
-	50% { opacity: 5 }
-	to { opacity: 0 }
-}
 </style>
 
 <style>
