@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BaseTypingText from '~/components/BaseTypingText.vue';
+import BaseTypingText from '~/components/Landing/LandingTypingText.vue';
 import { createChain } from '~/composables/chainContext';
 import TheLandingImage from '~/components/Landing/TheLandingImage.vue';
 
