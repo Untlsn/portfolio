@@ -26,7 +26,6 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 					{ icon: 'i-devicon-tailwindcss', label: 'tailwind', link: 'https://tailwindcss.com/' },
 					{ icon: 'i-my-chartjs', label: 'chartjs', link: 'https://www.chartjs.org/' },
 					{ icon: 'i-my-leaflet', label: 'leaflet', link: 'https://leafletjs.com/' },
-
 				]"
 				reverse
 			>

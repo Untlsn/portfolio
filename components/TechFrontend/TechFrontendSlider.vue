@@ -13,14 +13,13 @@ const [target, visible] = useIsVisible();
 		<h3 class="text-5 font-semibold mb-4">
 			<slot />
 		</h3>
-		<div ref="target" class="flex gap-4" :class="reverse && 'flex-row-reverse'">
-			<div class="size-20 p-2 bg-[#39163F] box-shadow rounded-lg absolute z-1" />
+		<div ref="target" class="flex " :class="reverse && 'flex-row-reverse'">
 			<a
 				v-for="(it, i) in props.data"
 				:key="it.label"
-				class="size-20 p-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label border-(~ white/10) rounded hover:before:(content-[attr(data-label)] absolute inset-0 w-full text-center text-lg capitalize mt-4 -z-1)"
-				:class="!i && 'z-1'"
-				:style="{ transform: visible ? '' : `translateX(${reverse ? '' : '-'}${i * 6}rem)` }"
+				class="w-1/5 aspect-square p-2 relative transition-transform duration-1000 data-[visible]:translate-0 cursor-pointer before-label border-(~ transparent) rounded hover:before:(content-[attr(data-label)] absolute inset-0 w-full text-center text-lg capitalize mt-4 -z-1)"
+				:class="!i ? 'z-1 bg-[#39163F] box-shadow' : 'border-white/10'"
+				:style="{ transform: visible ? '' : `translateX(${reverse ? '' : '-'}${i * 100}%)` }"
 				:data-visible="visible || undefined"
 				:href="it.link"
 				:data-label="it.label"
@@ -34,22 +33,14 @@ const [target, visible] = useIsVisible();
 
 <style scoped>
 .box-shadow {
-	box-shadow: 0 0 4rem .5rem #7C1148;
+	box-shadow: 0 0 1rem 0 #7C1148 inset;
 }
 .before-label:hover::before {
 	animation: from-top forwards 1s;
-}
-[data-reverce] .before-label:hover::before {
-	animation-name: from-right;
 }
 
 @keyframes from-top {
 	from { translate: 0 2rem; opacity: .2; }
 	to { translate: 0 4rem; }
-}
-
-@keyframes from-right {
-	from { translate: -3rem 0; opacity: .2; }
-	to { translate: -6rem 0; }
 }
 </style>
