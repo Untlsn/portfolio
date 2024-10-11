@@ -6,6 +6,13 @@ export default defineNuxtConfig({
 	components: {
 		dirs: [],
 	},
+	app: {
+		head: {
+			link: [
+				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+			],
+		},
+	},
 	eslint: {
 		config: {
 			stylistic: {
