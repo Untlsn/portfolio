@@ -4,6 +4,7 @@ import TheTechFrontend from '~/components/TechFrontend/TheTechFrontend.vue';
 import TheLanding from '~/components/Landing/TheLanding.vue';
 import TheBackgroundColors from '~/components/TheBackgroundColors.vue';
 import TheProjectsInternal from '~/components/Projects/TheProjectsInternal.vue';
+import TheProjectsFrontendMentor from '~/components/Projects/TheProjectsFrontendMentor.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import TheProjectsInternal from '~/components/Projects/TheProjectsInternal.vue';
 			Projekty:
 		</h2>
 		<TheProjectsInternal />
+		<TheProjectsFrontendMentor />
 	</main>
 	<TheBackgroundColors />
 </template>
