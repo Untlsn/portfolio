@@ -9,11 +9,11 @@ createChain(true);
 <template>
 	<div class="mt-40 mb-20 relative gap-20">
 		<h1 class="grid-(~ cols-1_1_1 rows-auto-3) max-w-screen gap-6 text-center text-10 lg:text-16">
-			<BaseTypingText text="Cześć" class="col-start-1 row-start-2 write-vertical-left rotate-180 bg-gradient-to-b" />
-			<BaseTypingText text="Jestem" class="col-start-2 row-start-1" />
-			<BaseTypingText text="Filip" class="col-start-3 row-start-2 write-vertical-left bg-gradient-to-t" />
+			<BaseTypingText :text="$t('landing.animatedWords.0')" class="col-start-1 row-start-2 write-vertical-left rotate-180 bg-gradient-to-b" />
+			<BaseTypingText :text="$t('landing.animatedWords.1')" class="col-start-2 row-start-1" />
+			<BaseTypingText :text="$t('landing.animatedWords.2')" class="col-start-3 row-start-2 write-vertical-left bg-gradient-to-t" />
 			<TheLandingImage />
-			<BaseTypingText text="Web Developer" class="col-span-3 row-start-3" />
+			<BaseTypingText :text="$t('landing.animatedWords.3')" class="col-span-3 row-start-3" />
 		</h1>
 	</div>
 	<article class="flex-(~ wrap) children:flex-1 justify-between text-5 border-(y white/10) text-nowrap">

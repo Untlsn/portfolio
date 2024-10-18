@@ -17,7 +17,7 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 					{ icon: 'i-devicon-nestjs', label: 'nestjs', link: 'https://nestjs.com/' },
 				]"
 			>
-				Frameworki:
+				{{ $t('frontend.titles.0') }}:
 			</TechFrontendSlider>
 			<TechFrontendSlider
 				class="text-right"
@@ -29,12 +29,12 @@ import TechFrontendSlider from '~/components/TechFrontend/TechFrontendSlider.vue
 				]"
 				reverse
 			>
-				Dodatkowe technologie:
+				{{ $t('frontend.titles.1') }}:
 			</TechFrontendSlider>
 		</div>
 		<section class="m-6 space-y-4">
-			<p>Frontendem zajmuje się od 2018 roku, z czego komercyjnie od 2021. Większość mojej przygody spędziłem pisząc kod w React, ale od 2022 mając większą kontrolę nad projektami szala przechyliła się na Vue (to portfolio jest napisane w Vue + Nuxt) a w szczególności SolidJS</p>
-			<p>Podobna sytuacja jest w przypadku CSS'a którego aktualnie praktycznie wyłącznie pisze z użyciem tailwind'a bądź unocss (engine css kompatybilny z tailwind)</p>
+			<p>{{ $t('frontend.description.0') }}:</p>
+			<p>{{ $t('frontend.description.1') }}:</p>
 		</section>
 	</article>
 </template>

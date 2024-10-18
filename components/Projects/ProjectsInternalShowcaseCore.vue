@@ -22,13 +22,13 @@ defineSlots<{
 		</AccordionTrigger>
 		<AccordionContent class="AccordionContent px-8 py-4">
 			<p class="mt-1">
-				<b>Poziom zaangażowania: </b>{{ commitment }}
+				<b>{{ $t('projects.fmcodeProjects.titles.engagement') }}: </b>{{ commitment }}
 			</p>
 			<p class="mt-1">
-				<b>Czas: </b>{{ time }}
+				<b>{{ $t('projects.fmcodeProjects.titles.time') }}: </b>{{ time }}
 			</p>
 			<p class="mt-1 mb-4">
-				<b>Zdobyte umiejętności: </b> {{ skills }}
+				<b>{{ $t('projects.fmcodeProjects.titles.skills') }}: </b> {{ skills }}
 			</p>
 			<slot name="default" />
 		</AccordionContent>

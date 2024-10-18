@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2024-04-03',
 	devtools: { enabled: true },
-	modules: ['@unocss/nuxt', 'radix-vue/nuxt', '@nuxt/eslint'],
+	modules: ['@unocss/nuxt', 'radix-vue/nuxt', '@nuxt/eslint', '@nuxtjs/i18n'],
 	components: {
 		dirs: [],
 	},
@@ -20,5 +20,13 @@ export default defineNuxtConfig({
 				semi: true,
 			},
 		},
+	},
+	i18n: {
+		strategy: 'prefix',
+		defaultLocale: 'pl',
+		locales: [
+			{ code: 'pl', language: 'pl-PL' },
+			{ code: 'en', language: 'en-US' },
+		],
 	},
 });

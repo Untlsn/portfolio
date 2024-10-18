@@ -13,6 +13,7 @@
     "@iconify-json/line-md": "^1.2.1",
     "@iconify-json/ph": "^1.2.0",
     "@nuxt/eslint": "^0.5.7",
+    "@nuxtjs/i18n": "^8.5.5",
     "@unocss/nuxt": "^0.63.1",
     "@vue/language-server": "^2.1.6",
     "@vueuse/core": "^11.1.0",

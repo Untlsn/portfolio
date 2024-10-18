@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{
 	src: string;
+	alt: string;
 }>();
 </script>
 
@@ -14,7 +15,7 @@ defineProps<{
 				<DialogClose class="i-ph-x h-12 w-8">
 					Zamknij
 				</DialogClose>
-				<img :src="src" alt="letssport" class="max-w-full mx-auto rounded">
+				<img :src="src" :alt="alt" class="max-w-full mx-auto rounded">
 			</DialogContent>
 		</DialogPortal>
 	</DialogRoot>

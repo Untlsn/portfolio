@@ -11,17 +11,17 @@ const all = ['Letssport', 'Światpaliw', 'Projekt rzadowy', 'Loximide', 'Nieruch
 	<article>
 		<div class="flex justify-between m-4">
 			<header class="text-5 font-semibold">
-				Wewnętrzne projekty:
+				{{ $t('projects.subtitles.0') }}:
 			</header>
 			<button
 				class="border-y-(~ white/50) border-x-(2 white/10) px-4 py-2 hocus:border-(y-white x-white/50) transition-colors"
 				@click="opened = opened.length ? [] : all"
 			>
-				{{ opened.length ? 'Zamkni wszystkie' : 'Otwórz wszystkie' }}
+				{{ $t(`projects.toggleAllButton.${Number(!!opened.length)}`) }}
 			</button>
 		</div>
 		<p class="m-4 text-sm">
-			Niestety ze wzgedu na umowe nie moge pokazać kodu źrudłowego a w niektórych przypadkach nawet strony
+			{{ $t('projects.licenceWarning') }}
 		</p>
 		<AccordionRoot
 			v-model="opened"
@@ -31,57 +31,31 @@ const all = ['Letssport', 'Światpaliw', 'Projekt rzadowy', 'Loximide', 'Nieruch
 		>
 			<ul>
 				<ProjectsInternalShowcase
-					title="Letssport"
-					description="zarządzanie wydarzeniami sportowymi"
-					commitment="Drugożędny frontend developer"
-					time="Kilka miesięcy po rozpoczęciu pracy, trwał 2 lata"
-					skills="Zarządzanie mapami, tworzenie dużych dynamicznych formularzy, praca z websocketem i grapthql, 1 kroki w SSR"
+					:title="$t('projects.fmcodeProjects.list.0.title')"
+					:description="$t('projects.fmcodeProjects.list.0.description')"
+					:commitment="$t('projects.fmcodeProjects.list.0.commitment')"
+					:time="$t('projects.fmcodeProjects.list.0.time')"
+					:skills="$t('projects.fmcodeProjects.list.0.skills')"
 					href="https://www.lets.sport/"
 					src="/screens/letssport.webp"
 				/>
 				<ProjectsInternalShowcase
-					title="Światpaliw"
-					description="prognozy paliw i nie tylko"
-					commitment="Pierwszożędny frontend developer"
-					time="Pierwsza połowa roku 2023"
-					skills="Głębrze zarządzanie SSR z SolidStart, tworzenie wykresów, pobieranie danych z niewygodnych (HTML) źródeł"
+					:title="$t('projects.fmcodeProjects.list.1.title')"
+					:description="$t('projects.fmcodeProjects.list.1.description')"
+					:commitment="$t('projects.fmcodeProjects.list.1.commitment')"
+					:time="$t('projects.fmcodeProjects.list.1.time')"
+					:skills="$t('projects.fmcodeProjects.list.1.skills')"
 					href="https://swiatpaliw.com/"
 					src="/screens/swiatpaliw.webp"
 				/>
 				<ProjectsInternalShowcaseLite
-					title="Projekt rzadowy"
-					description="zarządzanie dokumentami i projektami"
-					commitment="Pierwszożędny fullstack developer"
-					time="Pierwsza połowa roku 2023"
-					skills="Tworzenie aplikacji Fullstack z wykożystaniem SolidStart, zarządzanie plikami binarnymi, okiełznanie narzędzi popularnych w rządowych aplikacjach"
-				/>
-				<ProjectsInternalShowcaseLite
-					title="Loximide"
-					description="kalkulator dla klimatyzacji"
-					commitment="Pierwszożędny fullstack developer"
-					time="Drugi kwartał roku 2023"
-					skills="Zaawansowane uzycie ServerFunction, zaawanoswane uzycie wykresów, tworzenie pdf'ów z puppeteer"
-				/>
-				<ProjectsInternalShowcaseLite
-					title="Nieruchomości"
-					description="aplikacja do narządzania nieruchomościami"
-					commitment="Doskokowy frontend developer"
-					time="Pierwszy projekt po rozpoczęciu pracy"
-					skills="Nauka podstaw pracy z uzyciem wenwętrznego Gita i baremetal linuxa"
-				/>
-				<ProjectsInternalShowcaseLite
-					title="Bronisze"
-					description="rzarządzanie magazynami"
-					commitment="Doskokowy frontend developer"
-					time="Pierwszy rok pracy"
-					skills="Uzycie bootstrap, praca z zespołem, mocne uzycie redix, CRA i class-based Reacta"
-				/>
-				<ProjectsInternalShowcaseLite
-					title="AI"
-					description="GUI dla systemu wyszukującego zmian skórnych u pacjentów"
-					commitment="Główny frontend developer drugiej fali"
-					time="początek 2 roku pracy"
-					skills="Praca z elektronem. Naprawianie i modernizacja projektu w złym stanie technicznym"
+					v-for="i in 5"
+					:key="i"
+					:title="$t(`projects.fmcodeProjects.list.${1 + i}.title`)"
+					:description="$t(`projects.fmcodeProjects.list.${1 + i}.description`)"
+					:commitment="$t(`projects.fmcodeProjects.list.${1 + i}.commitment`)"
+					:time="$t(`projects.fmcodeProjects.list.${1 + i}.time`)"
+					:skills="$t(`projects.fmcodeProjects.list.${1 + i}.skills`)"
 				/>
 			</ul>
 		</AccordionRoot>

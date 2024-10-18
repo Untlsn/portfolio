@@ -22,7 +22,7 @@ defineProps<{
 				class="font-bold text-lg underline"
 			>{{ title }}</a>
 		</template>
-		<ProjectsScreenshotShow :src="src" />
+		<ProjectsScreenshotShow :src="src" :alt="title" />
 	</ProjectsInternalShowcaseCore>
 </template>
 
