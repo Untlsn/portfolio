@@ -13,7 +13,7 @@ import TheProjectsFrontendMentor from '~/components/Projects/TheProjectsFrontend
 		<TheLanding />
 		<TheTechFrontend />
 		<h2 class="text-8 lg:text-12 p-6 text-clip-gradient border-(y white/10)">
-			Projekty:
+			{{ $t('projects.title') }}:
 		</h2>
 		<TheProjectsInternal />
 		<TheProjectsFrontendMentor />
