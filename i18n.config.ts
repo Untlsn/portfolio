@@ -85,14 +85,14 @@ export default defineI18nConfig(() => ({
 			frontend: {
 				titles: ['Frameworki', 'Dodatkowe technologie'],
 				description: [
-					'Frontendem zajmuje się od 2018 roku, z czego komercyjnie od 2021. Większość mojej przygody spędziłem pisząc kod w React, ale od 2022 mając większą kontrolę nad projektami szala przechyliła się na Vue (to portfolio jest napisane w Vue + Nuxt) a w szczególności SolidJS',
-					'Podobna sytacja jest w przypadku CSS\'a gdzie zaczynałem pisząc go w czystym CSS\'sie, Boostrap\'ie i CSS-in-JS. Gdzie teraz pisze go głównie z wykozystaniem tailwind\'a i unocss\'a',
+					'Frontendem zajmuje się od 2018 roku, z czego komercyjnie od 2021. Większość mojej przygody spędziłem, pisząc kod w React, ale od 2022 mając większą kontrolę nad projektami, szala przechyliła się na Vue (to portfolio jest napisane w Vue + Nuxt) a w szczególności SolidJS',
+					'Podobna sytuacja jest w przypadku CSS\'a gdzie zaczynałem pisząc go w czystym CSS\'sie, Boostrap\'ie i CSS-in-JS. Gdzie teraz pisze go głównie z wykorzystaniem tailwind\'a i unocss\'a',
 				],
 			},
 			projects: {
 				title: 'Projekty',
 				subtitles: ['Wewnętrzne projekty', 'Frontend Mentor'],
-				licenceWarning: 'Niestety ze wzgedu na umowe nie moge pokazać kodu źrudłowego a w niektórych przypadkach nawet strony',
+				licenceWarning: 'Niestety ze względu na umowę nie mogę pokazać kodu źródłowego a w niektórych przypadkach nawet strony',
 				toggleAllButton: ['Zamkni wszystkie', 'Otwórz wszystkie'],
 				fmcodeProjects: {
 					titles: {
@@ -104,39 +104,39 @@ export default defineI18nConfig(() => ({
 						{
 							title: 'Letssport',
 							description: 'Zarządzanie wydarzeniami sportowymi',
-							commitment: 'Drugożędny frontend developer',
+							commitment: 'Drugorzędny frontend developer',
 							time: 'Kilka miesięcy po rozpoczęciu pracy, trwał 2 lata',
 							skills: 'Zarządzanie mapami, tworzenie dużych dynamicznych formularzy, praca z websocketem i grapthql, pierwsze kroki w SSR',
 						}, {
 							title: 'Światpaliw',
 							description: 'Prognozy paliw i nie tylko',
-							commitment: 'Pierwszożędny frontend developer',
+							commitment: 'Pierwszorzędny frontend developer',
 							time: 'Pierwsza połowa roku 2023',
-							skills: 'Głębrze zarządzanie SSR z SolidStart, tworzenie wykresów, pobieranie danych z niewygodnych (HTML) źródeł',
+							skills: 'Głębsze zarządzanie SSR z SolidStart, tworzenie wykresów, pobieranie danych z niewygodnych (HTML) źródeł',
 						}, {
-							title: 'Projekt rzadowy',
+							title: 'Projekt rządowy',
 							description: 'Zarządzanie dokumentami i projektami',
-							commitment: 'Pierwszożędny fullstack developer',
+							commitment: 'Pierwszorzędny fullstack developer',
 							time: 'Pierwsza połowa roku 2023',
-							skills: 'Tworzenie aplikacji Fullstack z wykożystaniem SolidStart, zarządzanie plikami binarnymi, okiełznanie narzędzi popularnych w rządowych aplikacjach',
+							skills: 'Tworzenie aplikacji Fullstack z wykorzystaniem SolidStart, zarządzanie plikami binarnymi, okiełznanie narzędzi popularnych w rządowych aplikacjach',
 						}, {
 							title: 'Loximide',
 							description: 'Kalkulator dla klimatyzacji',
-							commitment: 'Pierwszożędny fullstack developer',
+							commitment: 'Pierwszorzędny fullstack developer',
 							time: 'Drugi kwartał roku 2023',
-							skills: 'Zaawansowane uzycie ServerFunction, zaawanoswane uzycie wykresów, tworzenie pdf\'ów z puppeteer',
+							skills: 'Zaawansowane użycie ServerFunction, zaawansowane użycie wykresów, tworzenie pdf\'ów z puppeteer',
 						}, {
 							title: 'Nieruchomości',
 							description: 'Aplikacja do narządzania nieruchomościami',
 							commitment: 'Doskokowy frontend developer',
 							time: 'Pierwszy projekt po rozpoczęciu pracy',
-							skills: 'Nauka podstaw pracy z uzyciem wenwętrznego Gita i baremetal linuxa',
+							skills: 'Nauka podstaw pracy z użyciem wewnętrznego Gita i baremetal linuxa',
 						}, {
 							title: 'Bronisze',
-							description: 'Rzarządzanie magazynami',
+							description: 'Zarządzanie magazynami',
 							commitment: 'Doskokowy frontend developer',
 							time: 'Pierwszy rok pracy',
-							skills: 'Uzycie bootstrap, praca z zespołem, mocne uzycie redux, CRA i class-based Reacta',
+							skills: 'Użycie bootstrap, praca z zespołem, mocne użycie redux, CRA i class-based Reacta',
 						}, {
 							title: 'AI',
 							description: 'GUI dla systemu wyszukującego zmian skórnych u pacjentów',
@@ -145,7 +145,7 @@ export default defineI18nConfig(() => ({
 							skills: 'Praca z elektronem. Naprawianie i modernizacja projektu w złym stanie technicznym',
 						}, {
 							title: 'Automotive',
-							description: 'Strona z żetelnymi quizami motoryzacyjnymi',
+							description: 'Strona z rzetelnymi quizami motoryzacyjnymi',
 							commitment: 'Doskokowy frontend developer',
 							time: 'Końcówka 2023',
 							skills: 'Praca z T3Stack (Next, NextAuth, Prisma, Tailwind), praca z zaawansowanymi timerami',
