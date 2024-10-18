@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 		},
 	},
 	i18n: {
-		strategy: 'prefix',
+		strategy: 'prefix_and_default',
 		defaultLocale: 'pl',
 		locales: [
 			{ code: 'pl', language: 'pl-PL' },
